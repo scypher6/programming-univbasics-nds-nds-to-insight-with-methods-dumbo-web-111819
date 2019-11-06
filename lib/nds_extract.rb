@@ -21,7 +21,7 @@ end
 # using director_data as input
 def gross_for_director(director_data)    
       gross_sales = 0         #Set gross sales for each element of the db array
-      director_data.size.times do |index|         #loop based on the size of the inner arrays for each director
+      director_data[:movies].size.times do |index|         #loop based on the size of the inner arrays for each director
           gross_sales += director_data[:movies][index][:worldwide_gross]     #compute gross sales
       end #INNER loop
       gross_sales
